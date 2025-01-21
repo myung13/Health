@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>운동 관리 시스템</title>
+    <style>
+        /* 버튼 스타일 */
+        .button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* 공통적인 버튼 스타일 */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 로그아웃 버튼 위치 설정 */
+        /* welcome 페이지에서는 하단 고정 */
+        .logout-bottom {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .logout-top {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: inline-block; /* display:block 대신 inline-block 또는 flex로 변경 */
+            unicode-bidi: normal; /* 불필요한 unicode-bidi 제거 */
+        }
+
+    </style>
+</head>
+<body>
+<!-- 여기에 페이지 내용이 들어갑니다. -->
+<div th:replace="${body}"></div>
+
+<!-- 로그아웃 버튼: 페이지별로 다르게 적용 -->
+<div th:if="${#httpServletRequest.requestURI == '/welcome'}" class="logout-bottom">
+    <a th:href="@{/logout}" class="button">로그아웃</a>
+</div>
+<div th:if="${#httpServletRequest.requestURI != '/welcome'}" class="logout-top">
+    <a th:href="@{/logout}" class="button">로그아웃</a>
+</div>
+
+</body>
+</html>

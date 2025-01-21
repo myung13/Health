@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>운동 기록 목록</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* 날짜에 동그라미 표시 */
+        .has-exercise {
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 로그아웃 버튼 상단에 배치 -->
+<div class="logout-top">
+    <a th:href="@{/logout}" class="button">로그아웃</a>
+</div>
+
+<h1>운동 기록 목록</h1>
+
+<!-- 날짜 필터 -->
+<form th:action="@{/exercise-log/list}" method="get">
+    <label for="filterDate">조회할 날짜:</label>
+    <input type="date" id="filterDate" name="date" th:value="${selectedDate}">
+    <button type="submit">조회</button>
+</form>
+
+<!-- 유산소 운동 기록 테이블 -->
+<h2>유산소 운동 기록</h2>
+<table>
+    <thead>
+    <tr>
+        <th>운동 타입</th>
+        <th>운동 이름</th>
+        <th>시간(분)</th>
+        <th>칼로리(kcal)</th>
+        <th>수정/삭제</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="log : ${aerobicLogs}"> <!-- aerobicLogs -->
+        <td th:text="${log.aerobicExerciseType}"></td> <!-- 운동 타입 -->
+        <td th:text="${log.aerobicExerciseName}"></td> <!-- 운동 이름 -->
+        <td th:text="${log.duration} + ' 분'"></td> <!-- 운동 시간 -->
+        <td th:text="${log.caloriesBurned} + ' kcal'"></td> <!-- 칼로리 소모 -->
+        <td>
+            <a th:href="@{/exercise-log/edit/{id}(id=${log.id})}">수정</a>
+            <form th:action="@{/exercise-log/delete/aerobic/{id}(id=${log.id})}" method="post" onsubmit="return confirmDelete()">
+                <button type="submit">삭제</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- 무산소 운동 기록 테이블 -->
+<h2>무산소 운동 기록</h2>
+<table>
+    <thead>
+    <tr>
+        <th>운동 타입</th>
+        <th>운동 이름</th>
+        <th>무게 (kg)</th>g
+        <th>반복 횟수</th>
+        <th>세트 수</th>
+        <th>수정/삭제</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="log : ${anaerobicLogs}">
+        <td th:text="${log.anaerobicExerciseType}"></td> <!-- 운동 타입 -->
+        <td th:text="${log.anaerobicExerciseName}"></td> <!-- 무산소 운동 이름 -->
+        <td th:text="${log.weight} + ' kg'"></td> <!-- 무게 -->
+        <td th:text="${log.repetitions} +'회'"></td> <!-- 반복 횟수 -->
+        <td th:text="${log.sets}"></td> <!-- 세트 수 -->
+
+        <td>
+            <a th:href="@{/exercise-log/edit/{id}(id=${log.id})}">수정</a>
+            <form th:action="@{/exercise-log/delete/anaerobic/{id}(id=${log.id})}" method="post" onsubmit="return confirmDelete()">
+                <button type="submit">삭제</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    // 삭제 확인 함수
+    function confirmDelete() {
+        return confirm("정말 삭제하시겠습니까?");
+    }
+</script>
+
+</body>
+</html>
