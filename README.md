@@ -5,14 +5,13 @@
 회원 가입, 로그인, 유산소 및 무산소 운동 기록 생성, 수정, 삭제와 같은 기능을 제공합니다.
 
 ---
-
 ## 📦 사용 방법
-1. 리포지토리 클론: git clone https://github.com/myung13/Health.git << 명령어로 프로젝트를 로컬에 클론합니다.
-2. MYSQL 설정: MYSQL을 설치하고 실행합니다. apllication.properties에 아이디 비번이 있습니다.
-- CREATE DATABASE Health_db; 코드를 입력하고 실행합니다. (생성)
-- 데이터베이스 연결 정보는 src/main/resources/application.properties 파일에서 설정할 수 있습니다.
+1. 리포지토리 클론: IntelliJ 터미널에서
+   ```bash
+   git clone https://github.com/myung13/Health.git
+2. MYSQL 설정: MYSQL을 설치하고 실행합니다. application.properties에 아이디 비번이 있습니다.
+   CREATE DATABASE Health_db;
 3. IntelliJ 프로젝트 열고 -> Gradle 빌드 실행 -> 애플리케이션 실행 -> 브라우저 열고 http://localhost:8081 입력 후 기능을 확인합니다.
-  
 ---
 
 ## 🚀 주요 기능
