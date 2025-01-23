@@ -57,7 +57,8 @@
 ---
 
 ### View  
-<img src="https://github.com/user-attachments/assets/a7f0fbaa-51da-4792-b0dd-d69320c3a2e2" alt="Thymeleaf" width="100"/>
+<img src="https://github.com/user-attachments/assets/37f80f79-ce5c-45e6-a555-f1f8ee82adfb" alt="Thymeleaf" width="100"/>
+
 
 ---
 
