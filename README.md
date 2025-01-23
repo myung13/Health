@@ -40,20 +40,6 @@ View: Thymeleaf
 Build Tool: Gradle
 
 
-📂 프로젝트 구조
-src
-├── main
-│   ├── java
-│   │   └── com.health.Health
-│   │       ├── entity        # 엔티티 클래스 정의
-│   │       ├── repository    # 데이터베이스 접근 계층
-│   │       ├── service       # 비즈니스 로직 계층
-│   │       ├── controller    # 웹 요청 처리 계층
-│   ├── resources
-│       ├── application.yml   # 애플리케이션 설정 파일
-│       ├── templates         # Thymeleaf 템플릿
----------------------------------------------------------------------
-
 
 ![회원가입 로그인창](https://github.com/user-attachments/assets/36bf7e49-fc8e-489c-bdde-d6f3d469fbaf)
 ![운동기록 입력, 조회](https://github.com/user-attachments/assets/301ede3e-40ea-4a25-a7f0-9b63a531682b)
