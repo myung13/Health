@@ -45,32 +45,24 @@
 ## 🛠️ 기술 스택
 
 ### Back-end  
-<img src="https://github.com/user-attachments/assets/75c4bc4c-0867-42e7-b2d7-33da085be553" alt="Java" width="50"/>  
-**Java**: 백엔드 로직을 구현하는 데 사용한 주요 프로그래밍 언어입니다.  
-
-<img src="https://github.com/user-attachments/assets/77a6edd1-85f0-4677-92c9-a1553c1ae9e4" alt="Spring Boot" width="50"/>  
-**Spring Boot**: 효율적인 RESTful API 개발과 애플리케이션 구성을 지원합니다.  
-
-<img src="https://github.com/user-attachments/assets/cf762c34-60df-4206-b42e-f6c6cd0fc6f0" alt="Spring Security" width="50"/>  
-**Spring Security**: 사용자 인증 및 권한 관리를 처리합니다.  
+<img src="https://github.com/user-attachments/assets/75c4bc4c-0867-42e7-b2d7-33da085be553" alt="Java" width="100"/>  
+<img src="https://github.com/user-attachments/assets/77a6edd1-85f0-4677-92c9-a1553c1ae9e4" alt="Spring Boot" width="100"/>  
+<img src="https://github.com/user-attachments/assets/cf762c34-60df-4206-b42e-f6c6cd0fc6f0" alt="Spring Security" width="100"/>
 
 ---
 
 ### Database  
-<img src="https://github.com/user-attachments/assets/c1fd1d37-aa9f-4f50-bce9-baf06e1f8d81" alt="MySQL" width="50"/>  
-**MySQL**: 사용자와 운동 기록 데이터를 저장합니다.  
+<img src="https://github.com/user-attachments/assets/c1fd1d37-aa9f-4f50-bce9-baf06e1f8d81" alt="MySQL" width="100"/>
 
 ---
 
 ### View  
-<img src="https://github.com/user-attachments/assets/a7f0fbaa-51da-4792-b0dd-d69320c3a2e2" alt="Thymeleaf" width="50"/>  
-**Thymeleaf**: HTML 템플릿 엔진으로 프론트엔드와 백엔드 데이터를 연동합니다.  
+<img src="https://github.com/user-attachments/assets/a7f0fbaa-51da-4792-b0dd-d69320c3a2e2" alt="Thymeleaf" width="100"/>
 
 ---
 
 ### Build Tool  
-<img src="https://github.com/user-attachments/assets/12345678-gradle-logo.png" alt="Gradle" width="50"/>  
-**Gradle**: 의존성 관리와 빌드 자동화를 지원합니다.  
+= gradle
 
 ---
 
