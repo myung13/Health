@@ -10,6 +10,7 @@
    ```bash
    git clone https://github.com/myung13/Health.git
 2. MYSQL 설정: MYSQL을 설치하고 실행합니다. application.properties에 아이디 비번이 있습니다.
+   ```sql
    CREATE DATABASE Health_db;
 3. IntelliJ 프로젝트 열고 -> Gradle 빌드 실행 -> 애플리케이션 실행 -> 브라우저 열고 http://localhost:8081 입력 후 기능을 확인합니다.
 ---
