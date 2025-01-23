@@ -30,6 +30,7 @@ public class SecurityConfig {
                         .permitAll() // 로그아웃 요청은 인증 없이 허용
                 );
 
+
         return http.build();
     }
 
