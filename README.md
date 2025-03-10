@@ -9,11 +9,13 @@
 1. 리포지토리 클론: IntelliJ 터미널에서
    ```bash
    git clone https://github.com/myung13/Health.git
-2. MYSQL 설정: MYSQL을 설치하고 실행합니다. application.properties에 아이디 비번이 있습니다.
+2. MYSQL 설정: MYSQL을 설치하고 실행합니다. 아래 명령어를 실행하여 데이터베이스를 생성하세요.
    ```sql
    CREATE DATABASE Health_db;
-3. IntelliJ 프로젝트 열고 -> Gradle 빌드 실행 -> 애플리케이션 실행 -> 브라우저 열고 http://localhost:8081 입력 후 기능을 확인합니다.
----
+3. 애플리케이션 실행
+   - IntelliJ에서 프로젝트를 열고 Gradle 빌드를 실행합니다.
+   - 애플리케이션을 실행한 후, 브라우저에서 아래 주소로 접속합니다.
+     : http://localhost:8081
 
 ## 🚀 주요 기능
 
