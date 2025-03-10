@@ -77,7 +77,7 @@
 ---
 
 ### Build Tool  
-= gradle
+Gradle
 
 ---
 
