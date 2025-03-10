@@ -76,11 +76,11 @@ public class ExerciseLogController {
 
         // 유산소 운동과 무산소 운동 기록 분리
         List<ExerciseLog> aerobicLogs = logs.stream()
-                .filter(log -> log.getAerobicExerciseType() != null)
+                .filter(log -> log.getAerobicExerciseName() != null && !log.getAerobicExerciseName().isEmpty())
                 .collect(Collectors.toList());
 
         List<ExerciseLog> anaerobicLogs = logs.stream()
-                .filter(log -> log.getAnaerobicExerciseType() != null)
+                .filter(log -> log.getAnaerobicExerciseName() != null && !log.getAnaerobicExerciseName().isEmpty())
                 .collect(Collectors.toList());
 
 
