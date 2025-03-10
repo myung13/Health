@@ -6,7 +6,8 @@
 
 ---
 ## 📦 사용 방법
-1. 리포지토리 클론: IntelliJ 터미널에서
+1. **리포지토리 클론**
+    IntelliJ 터미널에서 아래 명령어를 입력하세요
    ```bash
    git clone https://github.com/myung13/Health.git
 2. MYSQL 설정: MYSQL을 설치하고 실행합니다. 아래 명령어를 실행하여 데이터베이스를 생성하세요.
